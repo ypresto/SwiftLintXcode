@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04E4BF341CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 04E4BF331CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme */; };
+		04E4BF361CB25D3200BC7305 /* SwiftLintAutoCorrect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF351CB25D3200BC7305 /* SwiftLintAutoCorrect.swift */; };
+		04E4BF381CB25D3200BC7305 /* NSObject_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04E4BF2F1CB25D3100BC7305 /* SwiftLintAutoCorrect.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintAutoCorrect.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E4BF331CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = SwiftLintAutoCorrect.xcscheme; path = SwiftLintAutoCorrect.xcodeproj/xcshareddata/xcschemes/SwiftLintAutoCorrect.xcscheme; sourceTree = SOURCE_ROOT; };
+		04E4BF351CB25D3200BC7305 /* SwiftLintAutoCorrect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintAutoCorrect.swift; sourceTree = "<group>"; };
+		04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject_Extension.swift; sourceTree = "<group>"; };
+		04E4BF391CB25D3200BC7305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		04E4BF271CB25D3100BC7305 = {
+			isa = PBXGroup;
+			children = (
+				04E4BF311CB25D3200BC7305 /* SwiftLintAutoCorrect */,
+				04E4BF301CB25D3100BC7305 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04E4BF301CB25D3100BC7305 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04E4BF2F1CB25D3100BC7305 /* SwiftLintAutoCorrect.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04E4BF311CB25D3200BC7305 /* SwiftLintAutoCorrect */ = {
+			isa = PBXGroup;
+			children = (
+				04E4BF351CB25D3200BC7305 /* SwiftLintAutoCorrect.swift */,
+				04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */,
+				04E4BF391CB25D3200BC7305 /* Info.plist */,
+				04E4BF321CB25D3200BC7305 /* Supporting Files */,
+			);
+			path = SwiftLintAutoCorrect;
+			sourceTree = "<group>";
+		};
+		04E4BF321CB25D3200BC7305 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04E4BF331CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04E4BF2E1CB25D3100BC7305 /* SwiftLintAutoCorrect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E4BF3C1CB25D3200BC7305 /* Build configuration list for PBXNativeTarget "SwiftLintAutoCorrect" */;
+			buildPhases = (
+				04E4BF2C1CB25D3100BC7305 /* Sources */,
+				04E4BF2D1CB25D3100BC7305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftLintAutoCorrect;
+			productName = SwiftLintAutoCorrect;
+			productReference = 04E4BF2F1CB25D3100BC7305 /* SwiftLintAutoCorrect.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04E4BF281CB25D3100BC7305 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Yuya Tanaka";
+				TargetAttributes = {
+					04E4BF2E1CB25D3100BC7305 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 04E4BF2B1CB25D3100BC7305 /* Build configuration list for PBXProject "SwiftLintAutoCorrect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 04E4BF271CB25D3100BC7305;
+			productRefGroup = 04E4BF301CB25D3100BC7305 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04E4BF2E1CB25D3100BC7305 /* SwiftLintAutoCorrect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04E4BF2D1CB25D3100BC7305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E4BF341CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04E4BF2C1CB25D3100BC7305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E4BF361CB25D3200BC7305 /* SwiftLintAutoCorrect.swift in Sources */,
+				04E4BF381CB25D3200BC7305 /* NSObject_Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		04E4BF3A1CB25D3200BC7305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		04E4BF3B1CB25D3200BC7305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		04E4BF3D1CB25D3200BC7305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = SwiftLintAutoCorrect/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = "$(DT_TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.ypresto.SwiftLintAutoCorrect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		04E4BF3E1CB25D3200BC7305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = SwiftLintAutoCorrect/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = "$(DT_TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.ypresto.SwiftLintAutoCorrect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04E4BF2B1CB25D3100BC7305 /* Build configuration list for PBXProject "SwiftLintAutoCorrect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E4BF3A1CB25D3200BC7305 /* Debug */,
+				04E4BF3B1CB25D3200BC7305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04E4BF3C1CB25D3200BC7305 /* Build configuration list for PBXNativeTarget "SwiftLintAutoCorrect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E4BF3D1CB25D3200BC7305 /* Debug */,
+				04E4BF3E1CB25D3200BC7305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04E4BF281CB25D3100BC7305 /* Project object */;
+}
