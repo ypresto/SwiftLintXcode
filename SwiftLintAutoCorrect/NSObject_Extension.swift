@@ -2,7 +2,7 @@
 //  NSObject_Extension.swift
 //
 //  Created by yuya.tanaka on 2016/04/04.
-//  Copyright © 2016年 Yuya Tanaka. All rights reserved.
+//  Copyright (c) 2016 Yuya Tanaka. All rights reserved.
 //
 
 import Foundation

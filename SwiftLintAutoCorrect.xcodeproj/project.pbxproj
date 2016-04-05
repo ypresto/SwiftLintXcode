@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0498717F1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498717E1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m */; };
+		049871811CB28EBF00C5F7B5 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049871801CB28EBF00C5F7B5 /* Formatter.swift */; };
 		04E4BF341CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 04E4BF331CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme */; };
 		04E4BF361CB25D3200BC7305 /* SwiftLintAutoCorrect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF351CB25D3200BC7305 /* SwiftLintAutoCorrect.swift */; };
 		04E4BF381CB25D3200BC7305 /* NSObject_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */; };
+		04E4BF411CB273A700BC7305 /* SaveHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF401CB273A700BC7305 /* SaveHook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0498717C1CB27F8800C5F7B5 /* SwiftLintAutoCorrect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftLintAutoCorrect-Bridging-Header.h"; sourceTree = "<group>"; };
+		0498717D1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftLintAutoCorrectTRVSXcode.h; sourceTree = "<group>"; };
+		0498717E1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftLintAutoCorrectTRVSXcode.m; sourceTree = "<group>"; };
+		049871801CB28EBF00C5F7B5 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		04E4BF2F1CB25D3100BC7305 /* SwiftLintAutoCorrect.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintAutoCorrect.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4BF331CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = SwiftLintAutoCorrect.xcscheme; path = SwiftLintAutoCorrect.xcodeproj/xcshareddata/xcschemes/SwiftLintAutoCorrect.xcscheme; sourceTree = SOURCE_ROOT; };
 		04E4BF351CB25D3200BC7305 /* SwiftLintAutoCorrect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintAutoCorrect.swift; sourceTree = "<group>"; };
 		04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject_Extension.swift; sourceTree = "<group>"; };
 		04E4BF391CB25D3200BC7305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E4BF401CB273A700BC7305 /* SaveHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveHook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -40,10 +48,15 @@
 		04E4BF311CB25D3200BC7305 /* SwiftLintAutoCorrect */ = {
 			isa = PBXGroup;
 			children = (
+				0498717D1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.h */,
+				0498717E1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m */,
 				04E4BF351CB25D3200BC7305 /* SwiftLintAutoCorrect.swift */,
 				04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */,
+				04E4BF401CB273A700BC7305 /* SaveHook.swift */,
+				049871801CB28EBF00C5F7B5 /* Formatter.swift */,
 				04E4BF391CB25D3200BC7305 /* Info.plist */,
 				04E4BF321CB25D3200BC7305 /* Supporting Files */,
+				0498717C1CB27F8800C5F7B5 /* SwiftLintAutoCorrect-Bridging-Header.h */,
 			);
 			path = SwiftLintAutoCorrect;
 			sourceTree = "<group>";
@@ -123,7 +136,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0498717F1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m in Sources */,
 				04E4BF361CB25D3200BC7305 /* SwiftLintAutoCorrect.swift in Sources */,
+				049871811CB28EBF00C5F7B5 /* Formatter.swift in Sources */,
+				04E4BF411CB273A700BC7305 /* SaveHook.swift in Sources */,
 				04E4BF381CB25D3200BC7305 /* NSObject_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +225,7 @@
 		04E4BF3D1CB25D3200BC7305 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
@@ -219,6 +236,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = net.ypresto.SwiftLintAutoCorrect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLintAutoCorrect/SwiftLintAutoCorrect-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Debug;
@@ -226,6 +245,7 @@
 		04E4BF3E1CB25D3200BC7305 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
@@ -236,6 +256,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = net.ypresto.SwiftLintAutoCorrect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLintAutoCorrect/SwiftLintAutoCorrect-Bridging-Header.h";
 				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Release;
@@ -259,6 +280,7 @@
 				04E4BF3E1CB25D3200BC7305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
