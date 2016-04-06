@@ -31,7 +31,7 @@ final class SaveHook {
 
     class func tryOnSaveDocument(document: NSDocument) -> Bool {
         if !enabled { return true }
-        Formatter.isFormattableDocument(document)
+        if !Formatter.isFormattableDocument(document) { return true }
         let sourceCodeDocument: IDESourceCodeDocument = SwiftLintXcodeTRVSXcode.sourceCodeDocument()
         guard sourceCodeDocument == document else { return true }
         return Formatter.sharedInstance.tryFormatDocument(sourceCodeDocument)
