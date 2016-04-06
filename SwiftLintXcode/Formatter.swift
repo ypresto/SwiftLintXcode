@@ -1,6 +1,6 @@
 //
 //  Formatter.swift
-//  SwiftLintAutoCorrect
+//  SwiftLintXcode
 //
 //  Created by yuya.tanaka on 2016/04/04.
 //  Copyright (c) 2016 Yuya Tanaka. All rights reserved.
@@ -11,10 +11,10 @@ import Cocoa
 
 final class Formatter {
     static var sharedInstance = Formatter()
-    private static let pathExtension = "swiftlintautocorrect"
+    private static let pathExtension = "SwiftLintXcode"
 
     let fileManager = NSFileManager.defaultManager()
-    let tempDirURL: NSURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("SwiftLintAutoCorrect-\(NSUUID().UUIDString)")
+    let tempDirURL: NSURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("SwiftLintXcode-\(NSUUID().UUIDString)")
 
     struct CursorPosition {
         let line: Int
@@ -33,7 +33,7 @@ final class Formatter {
         } catch let error as NSError {
             NSAlert(error: error).runModal()
         } catch {
-            NSAlert(error: NSError(domain: "net.ypresto.swiftlintautocorrect", code: 0, userInfo: [
+            NSAlert(error: NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
                 NSLocalizedDescriptionKey: "Unknown error occured: \(error)"
             ])).runModal()
         }
@@ -46,7 +46,7 @@ final class Formatter {
         let formattedString = try formatString(originalString)
         if formattedString == originalString { return }
 
-        let selectedRange = SwiftLintAutoCorrectTRVSXcode.textView().selectedRange()
+        let selectedRange = SwiftLintXcodeTRVSXcode.textView().selectedRange()
         let cursorPosition = cursorPositionForSelectedRange(selectedRange, textStorage: textStorage)
 
         textStorage.beginEditing()
@@ -54,7 +54,7 @@ final class Formatter {
         textStorage.endEditing()
 
         let newLocation = locationForCursorPosition(cursorPosition, textStorage: textStorage)
-        SwiftLintAutoCorrectTRVSXcode.textView().setSelectedRange(NSRange(location: newLocation, length: 0))
+        SwiftLintXcodeTRVSXcode.textView().setSelectedRange(NSRange(location: newLocation, length: 0))
     }
 
     private func cursorPositionForSelectedRange(selectedRange: NSRange, textStorage: DVTSourceTextStorage) -> CursorPosition {
@@ -83,7 +83,7 @@ final class Formatter {
             ])
             task.waitUntilExit()
             if task.terminationStatus != 0 {
-                throw NSError(domain: "net.ypresto.swiftlintautocorrect", code: 0, userInfo: [
+                throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
                     NSLocalizedDescriptionKey: "Executing swiftlint exited with non-zero status."
                 ])
             }
@@ -102,20 +102,20 @@ final class Formatter {
         task.launch()
         task.waitUntilExit()
         if task.terminationStatus != 0 {
-            throw NSError(domain: "net.ypresto.swiftlintautocorrect", code: 0, userInfo: [
+            throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
                 NSLocalizedDescriptionKey: "Executing `which swiftlint` exited with non-zero status."
             ])
         }
 
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         guard let pathString = String(data: data, encoding: NSUTF8StringEncoding) else {
-            throw NSError(domain: "net.ypresto.swiftlintautocorrect", code: 0, userInfo: [
+            throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
                 NSLocalizedDescriptionKey: "Cannot read result of `which swiftlint`."
             ])
         }
         let path = pathString.stringByTrimmingCharactersInSet(NSCharacterSet.newlineCharacterSet())
         if !fileManager.isExecutableFileAtPath(path) {
-            throw NSError(domain: "net.ypresto.swiftlintautocorrect", code: 0, userInfo: [
+            throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
                 NSLocalizedDescriptionKey: "swiftlint at \(path) is not executable."
             ])
         }
@@ -126,7 +126,7 @@ final class Formatter {
         try ensureTemporaryDirectory()
         let filePath = createTemporaryPath()
         if fileManager.fileExistsAtPath(filePath) {
-            throw NSError(domain: "net.ypresto.swiftlintautocorrect", code: 0, userInfo: [
+            throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
                 NSLocalizedDescriptionKey: "Cannot write to \(filePath), file already exists."
             ])
         }

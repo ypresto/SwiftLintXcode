@@ -42,7 +42,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSPrincipalClass</key>
-	<string>SwiftLintAutoCorrect</string>
+	<string>SwiftLintXcode</string>
 	<key>XC4Compatible</key>
 	<true/>
 	<key>XCPluginHasUI</key>

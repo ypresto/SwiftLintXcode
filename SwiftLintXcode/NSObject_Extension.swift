@@ -12,7 +12,7 @@ extension NSObject {
         let appName = NSBundle.mainBundle().infoDictionary?["CFBundleName"] as? NSString
         if appName == "Xcode" {
         	if sharedPlugin == nil {
-        		sharedPlugin = SwiftLintAutoCorrect(bundle: bundle)
+        		sharedPlugin = SwiftLintXcode(bundle: bundle)
         	}
         }
     }

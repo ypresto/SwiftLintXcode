@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Travis Jeffery. All rights reserved.
 //
 
-#import "SwiftLintAutoCorrectTRVSXcode.h"
+#import "SwiftLintXcodeTRVSXcode.h"
 
-@implementation SwiftLintAutoCorrectTRVSXcode
+@implementation SwiftLintXcodeTRVSXcode
 
 + (id)currentEditor {
   if ([[self windowController]

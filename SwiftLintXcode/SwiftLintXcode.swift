@@ -1,5 +1,5 @@
 //
-//  SwiftLintAutoCorrect.swift
+//  SwiftLintXcode.swift
 //
 //  Created by yuya.tanaka on 2016/04/04.
 //  Copyright (c) 2016 Yuya Tanaka. All rights reserved.
@@ -7,9 +7,9 @@
 
 import AppKit
 
-var sharedPlugin: SwiftLintAutoCorrect?
+var sharedPlugin: SwiftLintXcode?
 
-class SwiftLintAutoCorrect: NSObject {
+class SwiftLintXcode: NSObject {
 
     var bundle: NSBundle
     lazy var center = NSNotificationCenter.defaultCenter()
@@ -21,7 +21,7 @@ class SwiftLintAutoCorrect: NSObject {
         self.bundle = bundle
 
         super.init()
-        center.addObserver(self, selector: #selector(SwiftLintAutoCorrect.onApplicationDidFinishLaunching), name: NSApplicationDidFinishLaunchingNotification, object: nil)
+        center.addObserver(self, selector: #selector(SwiftLintXcode.onApplicationDidFinishLaunching), name: NSApplicationDidFinishLaunchingNotification, object: nil)
     }
 
     deinit {
@@ -42,20 +42,20 @@ class SwiftLintAutoCorrect: NSObject {
 
         guard let item = NSApp.mainMenu!.itemWithTitle("Edit") else { return }
 
-        let pluginMenu = NSMenu(title:"SwiftLint AutoCorrect")
-        let pluginMenuItem = NSMenuItem(title:"SwiftLint AutoCorrect", action: nil, keyEquivalent: "")
+        let pluginMenu = NSMenu(title:"SwiftLintXcode")
+        let pluginMenuItem = NSMenuItem(title:"SwiftLintXcode", action: nil, keyEquivalent: "")
         pluginMenuItem.submenu = pluginMenu
 
-        let autoCorrectMenuItem = NSMenuItem(title:"AutoCorrect Current File", action:#selector(SwiftLintAutoCorrect.doAutoCorrect), keyEquivalent:"")
+        let autoCorrectMenuItem = NSMenuItem(title:"AutoCorrect Current File", action:#selector(SwiftLintXcode.doAutoCorrect), keyEquivalent:"")
         autoCorrectMenuItem.target = self
         pluginMenu.addItem(autoCorrectMenuItem)
 
-        let enableMenuItem = NSMenuItem(title:"Enable AutoCorrect on Save", action:#selector(SwiftLintAutoCorrect.doEnableFormatOnSave), keyEquivalent:"")
+        let enableMenuItem = NSMenuItem(title:"Enable AutoCorrect on Save", action:#selector(SwiftLintXcode.doEnableFormatOnSave), keyEquivalent:"")
         enableMenuItem.target = self
         pluginMenu.addItem(enableMenuItem)
         self.enableMenuItem = enableMenuItem
 
-        let disableMenuItem = NSMenuItem(title:"Disable AutoCorrect on Save", action:#selector(SwiftLintAutoCorrect.doDisableFormatOnSave), keyEquivalent:"")
+        let disableMenuItem = NSMenuItem(title:"Disable AutoCorrect on Save", action:#selector(SwiftLintXcode.doDisableFormatOnSave), keyEquivalent:"")
         disableMenuItem.target = self
         pluginMenu.addItem(disableMenuItem)
         self.disableMenuItem = disableMenuItem
@@ -67,7 +67,7 @@ class SwiftLintAutoCorrect: NSObject {
     }
 
     func doAutoCorrect() {
-        let sourceCodeDocument: IDESourceCodeDocument = SwiftLintAutoCorrectTRVSXcode.sourceCodeDocument()
+        let sourceCodeDocument: IDESourceCodeDocument = SwiftLintXcodeTRVSXcode.sourceCodeDocument()
         guard Formatter.isFormattableDocument(sourceCodeDocument) else { return }
         Formatter.sharedInstance.tryFormatDocument(sourceCodeDocument)
     }

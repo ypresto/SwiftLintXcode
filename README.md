@@ -1,5 +1,5 @@
-SwiftLintAutoCorrect
-====================
+SwiftLintXcode
+==============
 
 An Xcode plug-in to format your code using [SwiftLint](https://github.com/realm/SwiftLint).
 
@@ -16,8 +16,8 @@ INSTALLATION
 # Please ensure swiftlint is on PATH.
 brew update && brew install swiftlint
 
-git clone https://github.com/ypresto/SwiftLintAutoCorrect
-cd SwiftLintAutoCorrect
+git clone https://github.com/ypresto/SwiftLintXcode
+cd SwiftLintXcode
 # Build and install.
 xcodebuild -configuration Release
 ```
@@ -25,7 +25,7 @@ xcodebuild -configuration Release
 To uninstall, just remove plug-in directory.
 
 ```bash
-rm -rf "$HOME/Library/Application Support/Developer/Shared/Xcode/Plug-ins/SwiftLintAutoCorrect.xcplugin"
+rm -rf "$HOME/Library/Application Support/Developer/Shared/Xcode/Plug-ins/SwiftLintXcode.xcplugin"
 ```
 
 

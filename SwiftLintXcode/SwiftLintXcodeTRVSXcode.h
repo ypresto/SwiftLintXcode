@@ -123,7 +123,7 @@
 @property (readonly) IDEWorkspace *workspace;
 @end
 
-@interface SwiftLintAutoCorrectTRVSXcode : NSObject
+@interface SwiftLintXcodeTRVSXcode : NSObject
 
 + (IDESourceCodeDocument *)sourceCodeDocument;
 + (NSTextView *)textView;

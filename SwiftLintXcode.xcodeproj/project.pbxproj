@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0498717F1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498717E1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m */; };
+		0498717F1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498717E1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.m */; };
 		049871811CB28EBF00C5F7B5 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049871801CB28EBF00C5F7B5 /* Formatter.swift */; };
-		04E4BF341CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 04E4BF331CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme */; };
-		04E4BF361CB25D3200BC7305 /* SwiftLintAutoCorrect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF351CB25D3200BC7305 /* SwiftLintAutoCorrect.swift */; };
+		04E4BF341CB25D3200BC7305 /* SwiftLintXcode.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 04E4BF331CB25D3200BC7305 /* SwiftLintXcode.xcscheme */; };
+		04E4BF361CB25D3200BC7305 /* SwiftLintXcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF351CB25D3200BC7305 /* SwiftLintXcode.swift */; };
 		04E4BF381CB25D3200BC7305 /* NSObject_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */; };
 		04E4BF411CB273A700BC7305 /* SaveHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF401CB273A700BC7305 /* SaveHook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0498717C1CB27F8800C5F7B5 /* SwiftLintAutoCorrect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftLintAutoCorrect-Bridging-Header.h"; sourceTree = "<group>"; };
-		0498717D1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftLintAutoCorrectTRVSXcode.h; sourceTree = "<group>"; };
-		0498717E1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftLintAutoCorrectTRVSXcode.m; sourceTree = "<group>"; };
+		0498717C1CB27F8800C5F7B5 /* SwiftLintXcode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftLintXcode-Bridging-Header.h"; sourceTree = "<group>"; };
+		0498717D1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftLintXcodeTRVSXcode.h; sourceTree = "<group>"; };
+		0498717E1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftLintXcodeTRVSXcode.m; sourceTree = "<group>"; };
 		049871801CB28EBF00C5F7B5 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
-		04E4BF2F1CB25D3100BC7305 /* SwiftLintAutoCorrect.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintAutoCorrect.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		04E4BF331CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = SwiftLintAutoCorrect.xcscheme; path = SwiftLintAutoCorrect.xcodeproj/xcshareddata/xcschemes/SwiftLintAutoCorrect.xcscheme; sourceTree = SOURCE_ROOT; };
-		04E4BF351CB25D3200BC7305 /* SwiftLintAutoCorrect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintAutoCorrect.swift; sourceTree = "<group>"; };
+		04E4BF2F1CB25D3100BC7305 /* SwiftLintXcode.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintXcode.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E4BF331CB25D3200BC7305 /* SwiftLintXcode.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = SwiftLintXcode.xcscheme; path = SwiftLintXcode.xcodeproj/xcshareddata/xcschemes/SwiftLintXcode.xcscheme; sourceTree = SOURCE_ROOT; };
+		04E4BF351CB25D3200BC7305 /* SwiftLintXcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintXcode.swift; sourceTree = "<group>"; };
 		04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject_Extension.swift; sourceTree = "<group>"; };
 		04E4BF391CB25D3200BC7305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E4BF401CB273A700BC7305 /* SaveHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveHook.swift; sourceTree = "<group>"; };
@@ -32,7 +32,7 @@
 		04E4BF271CB25D3100BC7305 = {
 			isa = PBXGroup;
 			children = (
-				04E4BF311CB25D3200BC7305 /* SwiftLintAutoCorrect */,
+				04E4BF311CB25D3200BC7305 /* SwiftLintXcode */,
 				04E4BF301CB25D3100BC7305 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,31 +40,31 @@
 		04E4BF301CB25D3100BC7305 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04E4BF2F1CB25D3100BC7305 /* SwiftLintAutoCorrect.xcplugin */,
+				04E4BF2F1CB25D3100BC7305 /* SwiftLintXcode.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04E4BF311CB25D3200BC7305 /* SwiftLintAutoCorrect */ = {
+		04E4BF311CB25D3200BC7305 /* SwiftLintXcode */ = {
 			isa = PBXGroup;
 			children = (
-				0498717D1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.h */,
-				0498717E1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m */,
-				04E4BF351CB25D3200BC7305 /* SwiftLintAutoCorrect.swift */,
+				0498717D1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.h */,
+				0498717E1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.m */,
+				04E4BF351CB25D3200BC7305 /* SwiftLintXcode.swift */,
 				04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */,
 				04E4BF401CB273A700BC7305 /* SaveHook.swift */,
 				049871801CB28EBF00C5F7B5 /* Formatter.swift */,
 				04E4BF391CB25D3200BC7305 /* Info.plist */,
 				04E4BF321CB25D3200BC7305 /* Supporting Files */,
-				0498717C1CB27F8800C5F7B5 /* SwiftLintAutoCorrect-Bridging-Header.h */,
+				0498717C1CB27F8800C5F7B5 /* SwiftLintXcode-Bridging-Header.h */,
 			);
-			path = SwiftLintAutoCorrect;
+			path = SwiftLintXcode;
 			sourceTree = "<group>";
 		};
 		04E4BF321CB25D3200BC7305 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				04E4BF331CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme */,
+				04E4BF331CB25D3200BC7305 /* SwiftLintXcode.xcscheme */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -72,9 +72,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04E4BF2E1CB25D3100BC7305 /* SwiftLintAutoCorrect */ = {
+		04E4BF2E1CB25D3100BC7305 /* SwiftLintXcode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04E4BF3C1CB25D3200BC7305 /* Build configuration list for PBXNativeTarget "SwiftLintAutoCorrect" */;
+			buildConfigurationList = 04E4BF3C1CB25D3200BC7305 /* Build configuration list for PBXNativeTarget "SwiftLintXcode" */;
 			buildPhases = (
 				04E4BF2C1CB25D3100BC7305 /* Sources */,
 				04E4BF2D1CB25D3100BC7305 /* Resources */,
@@ -83,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftLintAutoCorrect;
-			productName = SwiftLintAutoCorrect;
-			productReference = 04E4BF2F1CB25D3100BC7305 /* SwiftLintAutoCorrect.xcplugin */;
+			name = SwiftLintXcode;
+			productName = SwiftLintXcode;
+			productReference = 04E4BF2F1CB25D3100BC7305 /* SwiftLintXcode.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 04E4BF2B1CB25D3100BC7305 /* Build configuration list for PBXProject "SwiftLintAutoCorrect" */;
+			buildConfigurationList = 04E4BF2B1CB25D3100BC7305 /* Build configuration list for PBXProject "SwiftLintXcode" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04E4BF2E1CB25D3100BC7305 /* SwiftLintAutoCorrect */,
+				04E4BF2E1CB25D3100BC7305 /* SwiftLintXcode */,
 			);
 		};
 /* End PBXProject section */
@@ -125,7 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E4BF341CB25D3200BC7305 /* SwiftLintAutoCorrect.xcscheme in Resources */,
+				04E4BF341CB25D3200BC7305 /* SwiftLintXcode.xcscheme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0498717F1CB27F8900C5F7B5 /* SwiftLintAutoCorrectTRVSXcode.m in Sources */,
-				04E4BF361CB25D3200BC7305 /* SwiftLintAutoCorrect.swift in Sources */,
+				0498717F1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.m in Sources */,
+				04E4BF361CB25D3200BC7305 /* SwiftLintXcode.swift in Sources */,
 				049871811CB28EBF00C5F7B5 /* Formatter.swift in Sources */,
 				04E4BF411CB273A700BC7305 /* SaveHook.swift in Sources */,
 				04E4BF381CB25D3200BC7305 /* NSObject_Extension.swift in Sources */,
@@ -230,13 +230,13 @@
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = SwiftLintAutoCorrect/Info.plist;
+				INFOPLIST_FILE = SwiftLintXcode/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				LD_RUNPATH_SEARCH_PATHS = "$(DT_TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = net.ypresto.SwiftLintAutoCorrect;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLintAutoCorrect/SwiftLintAutoCorrect-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ypresto.SwiftLintXcode;
+				PRODUCT_NAME = SwiftLintXcode;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLintXcode/SwiftLintXcode-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = xcplugin;
 			};
@@ -250,13 +250,13 @@
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = SwiftLintAutoCorrect/Info.plist;
+				INFOPLIST_FILE = SwiftLintXcode/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				LD_RUNPATH_SEARCH_PATHS = "$(DT_TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = net.ypresto.SwiftLintAutoCorrect;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLintAutoCorrect/SwiftLintAutoCorrect-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ypresto.SwiftLintXcode;
+				PRODUCT_NAME = SwiftLintXcode;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLintXcode/SwiftLintXcode-Bridging-Header.h";
 				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Release;
@@ -264,7 +264,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04E4BF2B1CB25D3100BC7305 /* Build configuration list for PBXProject "SwiftLintAutoCorrect" */ = {
+		04E4BF2B1CB25D3100BC7305 /* Build configuration list for PBXProject "SwiftLintXcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04E4BF3A1CB25D3200BC7305 /* Debug */,
@@ -273,7 +273,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04E4BF3C1CB25D3200BC7305 /* Build configuration list for PBXNativeTarget "SwiftLintAutoCorrect" */ = {
+		04E4BF3C1CB25D3200BC7305 /* Build configuration list for PBXNativeTarget "SwiftLintXcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04E4BF3D1CB25D3200BC7305 /* Debug */,
