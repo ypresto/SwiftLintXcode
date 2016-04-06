@@ -11,11 +11,17 @@ Runs `swiftlint autocorrect --path CURRENT_FILE` before \*.swift file is saved.
 INSTALLATION
 ------------
 
-```bash
-# This plugin does not bundle swiftlint binary.
-# Please ensure swiftlint is on PATH.
-brew update && brew install swiftlint
+Then install via [Alcatraz](https://github.com/alcatraz/Alcatraz).
 
+This plugin does not bundle swiftlint binary. Please ensure swiftlint is on PATH.
+
+```bash
+brew update && brew install swiftlint
+```
+
+### Manual installation
+
+```bash
 git clone https://github.com/ypresto/SwiftLintXcode
 cd SwiftLintXcode
 # Build and install.
