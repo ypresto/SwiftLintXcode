@@ -13,14 +13,12 @@ final class Formatter {
     static var sharedInstance = Formatter()
     private static let pathExtension = "SwiftLintXcode"
 
-    let fileManager = NSFileManager.defaultManager()
-    let tempDirURL: NSURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("SwiftLintXcode-\(NSUUID().UUIDString)")
+    private let fileManager = NSFileManager.defaultManager()
 
-    struct CursorPosition {
+    private struct CursorPosition {
         let line: Int
         let column: Int
     }
-
 
     class func isFormattableDocument(document: NSDocument) -> Bool {
         return (document.fileURL?.pathExtension?.lowercaseString == "swift") ?? false
@@ -123,7 +121,6 @@ final class Formatter {
     }
 
     private func withTempporaryFile<T>(@noescape callback: (filePath: String) throws -> T) throws -> T {
-        try ensureTemporaryDirectory()
         let filePath = createTemporaryPath()
         if fileManager.fileExistsAtPath(filePath) {
             throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
@@ -135,11 +132,7 @@ final class Formatter {
     }
 
     private func createTemporaryPath() -> String {
-        return tempDirURL.URLByAppendingPathComponent(NSUUID().UUIDString).path! + ".swift"
-    }
-
-    private func ensureTemporaryDirectory() throws {
-        if fileManager.fileExistsAtPath(tempDirURL.path!) { return }
-        try fileManager.createDirectoryAtURL(tempDirURL, withIntermediateDirectories: true, attributes: nil)
+        return NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+            .URLByAppendingPathComponent("SwiftLintXcode_\(NSUUID().UUIDString).swift").path!
     }
 }
