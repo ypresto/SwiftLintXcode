@@ -11,8 +11,8 @@ import Cocoa
 
 final class Formatter {
     static var sharedInstance = Formatter()
-    private static let pathExtension = "SwiftLintXcode"
 
+    private static let pathExtension = "SwiftLintXcode"
     private let fileManager = NSFileManager.defaultManager()
 
     private struct CursorPosition {
@@ -71,12 +71,18 @@ final class Formatter {
     }
 
     private func formatString(string: String) throws -> String {
+        guard let workspaceRootDirectory = SwiftLintXcodeIDEHelper.currentWorkspaceURL()?.URLByDeletingLastPathComponent?.path else {
+            throw errorWithMessage("Cannot determine project directory.")
+        }
+
         return try withTempporaryFile { (filePath) in
             try string.writeToFile(filePath, atomically: false, encoding: NSUTF8StringEncoding)
-            let swiftlintPath = try self.getExecutableOnPath("swiftlint")
-            let task = NSTask.launchedTaskWithLaunchPath(swiftlintPath, arguments: [
-                "autocorrect", "--path", filePath
-            ])
+            let swiftlintPath = try self.getExecutableOnPath(name: "swiftlint", workingDirectory: workspaceRootDirectory)
+            let task = NSTask()
+            task.launchPath = swiftlintPath
+            task.arguments = ["autocorrect", "--path", filePath]
+            task.currentDirectoryPath = workspaceRootDirectory
+            task.launch()
             task.waitUntilExit()
             if task.terminationStatus != 0 {
                 throw errorWithMessage("Executing swiftlint exited with non-zero status.")
@@ -85,13 +91,14 @@ final class Formatter {
         }
     }
 
-    private func getExecutableOnPath(name: String) throws -> String {
+    private func getExecutableOnPath(name name: String, workingDirectory: String) throws -> String {
         let pipe = NSPipe()
         let task = NSTask()
         task.launchPath = "/bin/bash"
         task.arguments = [
             "-l", "-c", "which \(name)"
         ]
+        task.currentDirectoryPath = workingDirectory
         task.standardOutput = pipe
         task.launch()
         task.waitUntilExit()

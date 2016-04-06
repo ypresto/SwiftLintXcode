@@ -3,3 +3,4 @@
 //
 
 #import "SwiftLintXcodeTRVSXcode.h"
+#import "SwiftLintXcodeIDEHelper.h"
