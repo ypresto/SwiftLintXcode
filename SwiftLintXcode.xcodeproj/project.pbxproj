@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0498717F1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498717E1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.m */; };
 		049871811CB28EBF00C5F7B5 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049871801CB28EBF00C5F7B5 /* Formatter.swift */; };
+		04DFAD491CB50BC8007998DF /* errorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DFAD481CB50BC8007998DF /* errorHelper.swift */; };
 		04E4BF341CB25D3200BC7305 /* SwiftLintXcode.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 04E4BF331CB25D3200BC7305 /* SwiftLintXcode.xcscheme */; };
 		04E4BF361CB25D3200BC7305 /* SwiftLintXcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF351CB25D3200BC7305 /* SwiftLintXcode.swift */; };
 		04E4BF381CB25D3200BC7305 /* NSObject_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */; };
@@ -20,6 +21,7 @@
 		0498717D1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftLintXcodeTRVSXcode.h; sourceTree = "<group>"; };
 		0498717E1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftLintXcodeTRVSXcode.m; sourceTree = "<group>"; };
 		049871801CB28EBF00C5F7B5 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		04DFAD481CB50BC8007998DF /* errorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = errorHelper.swift; sourceTree = "<group>"; };
 		04E4BF2F1CB25D3100BC7305 /* SwiftLintXcode.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintXcode.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4BF331CB25D3200BC7305 /* SwiftLintXcode.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = SwiftLintXcode.xcscheme; path = SwiftLintXcode.xcodeproj/xcshareddata/xcschemes/SwiftLintXcode.xcscheme; sourceTree = SOURCE_ROOT; };
 		04E4BF351CB25D3200BC7305 /* SwiftLintXcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintXcode.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				04E4BF371CB25D3200BC7305 /* NSObject_Extension.swift */,
 				04E4BF401CB273A700BC7305 /* SaveHook.swift */,
 				049871801CB28EBF00C5F7B5 /* Formatter.swift */,
+				04DFAD481CB50BC8007998DF /* errorHelper.swift */,
 				04E4BF391CB25D3200BC7305 /* Info.plist */,
 				04E4BF321CB25D3200BC7305 /* Supporting Files */,
 				0498717C1CB27F8800C5F7B5 /* SwiftLintXcode-Bridging-Header.h */,
@@ -139,6 +142,7 @@
 				0498717F1CB27F8900C5F7B5 /* SwiftLintXcodeTRVSXcode.m in Sources */,
 				04E4BF361CB25D3200BC7305 /* SwiftLintXcode.swift in Sources */,
 				049871811CB28EBF00C5F7B5 /* Formatter.swift in Sources */,
+				04DFAD491CB50BC8007998DF /* errorHelper.swift in Sources */,
 				04E4BF411CB273A700BC7305 /* SaveHook.swift in Sources */,
 				04E4BF381CB25D3200BC7305 /* NSObject_Extension.swift in Sources */,
 			);

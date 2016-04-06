@@ -31,9 +31,7 @@ final class Formatter {
         } catch let error as NSError {
             NSAlert(error: error).runModal()
         } catch {
-            NSAlert(error: NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
-                NSLocalizedDescriptionKey: "Unknown error occured: \(error)"
-            ])).runModal()
+            NSAlert(error: errorWithMessage("Unknown error occured: \(error)")).runModal()
         }
         return false
     }
@@ -81,9 +79,7 @@ final class Formatter {
             ])
             task.waitUntilExit()
             if task.terminationStatus != 0 {
-                throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
-                    NSLocalizedDescriptionKey: "Executing swiftlint exited with non-zero status."
-                ])
+                throw errorWithMessage("Executing swiftlint exited with non-zero status.")
             }
             return try String(contentsOfFile: filePath, encoding: NSUTF8StringEncoding)
         }
@@ -100,22 +96,16 @@ final class Formatter {
         task.launch()
         task.waitUntilExit()
         if task.terminationStatus != 0 {
-            throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
-                NSLocalizedDescriptionKey: "Executing `which swiftlint` exited with non-zero status."
-            ])
+            throw errorWithMessage("Executing `which swiftlint` exited with non-zero status.")
         }
 
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         guard let pathString = String(data: data, encoding: NSUTF8StringEncoding) else {
-            throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
-                NSLocalizedDescriptionKey: "Cannot read result of `which swiftlint`."
-            ])
+            throw errorWithMessage("Cannot read result of `which swiftlint`.")
         }
         let path = pathString.stringByTrimmingCharactersInSet(NSCharacterSet.newlineCharacterSet())
         if !fileManager.isExecutableFileAtPath(path) {
-            throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
-                NSLocalizedDescriptionKey: "swiftlint at \(path) is not executable."
-            ])
+            throw errorWithMessage("swiftlint at \(path) is not executable.")
         }
         return path
     }
@@ -123,9 +113,7 @@ final class Formatter {
     private func withTempporaryFile<T>(@noescape callback: (filePath: String) throws -> T) throws -> T {
         let filePath = createTemporaryPath()
         if fileManager.fileExistsAtPath(filePath) {
-            throw NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
-                NSLocalizedDescriptionKey: "Cannot write to \(filePath), file already exists."
-            ])
+            throw errorWithMessage("Cannot write to \(filePath), file already exists.")
         }
         defer { _ = try? fileManager.removeItemAtPath(filePath) }
         return try callback(filePath: filePath)
