@@ -5,6 +5,8 @@ An Xcode plug-in to format your code using [SwiftLint](https://github.com/realm/
 
 Runs `swiftlint autocorrect --path CURRENT_FILE` before \*.swift file is saved.
 
+![Screenshot](https://cloud.githubusercontent.com/assets/400558/14304460/d2a133dc-fbed-11e5-9573-2c21cce699e0.png)
+
 
 INSTALLATION
 ------------
