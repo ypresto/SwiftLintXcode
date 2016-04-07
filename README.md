@@ -11,7 +11,7 @@ Runs `swiftlint autocorrect --path CURRENT_FILE` before \*.swift file is saved.
 INSTALLATION
 ------------
 
-Then install via [Alcatraz](https://github.com/alcatraz/Alcatraz).
+Install via [Alcatraz](https://github.com/alcatraz/Alcatraz), a package manager for Xcode.
 
 This plugin does not bundle swiftlint binary. Please ensure swiftlint is on PATH.
 
