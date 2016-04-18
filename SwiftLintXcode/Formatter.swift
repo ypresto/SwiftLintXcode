@@ -46,7 +46,7 @@ final class Formatter {
         let cursorPosition = cursorPositionForSelectedRange(selectedRange, textStorage: textStorage)
 
         textStorage.beginEditing()
-        textStorage.replaceCharactersInRange(NSRange(location: 0,  length: textStorage.length), withString: formattedString, withUndoManager: document.undoManager())
+        textStorage.replaceCharactersInRange(NSRange(location: 0, length: textStorage.length), withString: formattedString, withUndoManager: document.undoManager())
         textStorage.endEditing()
 
         let newLocation = locationForCursorPosition(cursorPosition, textStorage: textStorage)
