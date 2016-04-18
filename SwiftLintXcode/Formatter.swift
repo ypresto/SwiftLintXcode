@@ -96,7 +96,7 @@ final class Formatter {
         let task = NSTask()
         task.launchPath = "/bin/bash"
         task.arguments = [
-            "-l", "-c", "which \(name)"
+            "--norc", "-l", "-c", "which \(name)"
         ]
         task.currentDirectoryPath = workingDirectory
         task.standardOutput = pipe
