@@ -80,7 +80,7 @@ final class Formatter {
             let swiftlintPath = try self.getExecutableOnPath(name: "swiftlint", workingDirectory: workspaceRootDirectory)
             let task = NSTask()
             task.launchPath = swiftlintPath
-            task.arguments = ["autocorrect", "--path", filePath]
+            task.arguments = ["autocorrect", "--format", "--path", filePath]
             task.currentDirectoryPath = workspaceRootDirectory
             task.launch()
             task.waitUntilExit()
