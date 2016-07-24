@@ -7,6 +7,11 @@ Runs `swiftlint autocorrect --path CURRENT_FILE` before \*.swift file is saved.
 
 ![Screenshot](https://cloud.githubusercontent.com/assets/400558/14304460/d2a133dc-fbed-11e5-9573-2c21cce699e0.png)
 
+IMPORTANT:  Xcode 8
+-------------------
+
+Xcode 8 won't load any unsigned plugins.
+https://github.com/alcatraz/Alcatraz/issues/475
 
 INSTALLATION
 ------------
