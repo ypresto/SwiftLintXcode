@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 0.2.0
+----------------------------
+
+- Xcode 8 Support.
+
+
 Version 0.1.2
 ----------------------------
 
@@ -11,7 +17,7 @@ Version 0.1.2
 Version 0.1.1
 ----------------------------
 
-- Rename plug-in name: SwiftLintAutoCorrect -> SwiftLintXcode
+- Rename plug-in name: SwiftLintAutoCorrect -> SwiftLintXcode.
 
 
 Version 0.1.0
