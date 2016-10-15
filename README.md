@@ -15,7 +15,7 @@ Xcode 8 won't load any unsigned plugins without resigning Xcode itself.
 https://github.com/alcatraz/Alcatraz/issues/475
 
 See XVim's nice and simple installation doc to resign it..! (NOTE: AT YOUR OWN SECURITY RISK)
-https://github.com/XVimProject/XVim/blob/3167408ade82cfef87acc704822da61af69688f8/INSTALL\_Xcode8.md
+https://github.com/XVimProject/XVim/blob/3167408ade82cfef87acc704822da61af69688f8/INSTALL_Xcode8.md
 
 
 INSTALLATION
