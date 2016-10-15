@@ -8,7 +8,7 @@
 
 import Foundation
 
-func errorWithMessage(message: String) -> NSError {
+func errorWithMessage(_ message: String) -> NSError {
     return NSError(domain: "net.ypresto.SwiftLintXcode", code: 0, userInfo: [
         NSLocalizedDescriptionKey: message
     ])

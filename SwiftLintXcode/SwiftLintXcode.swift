@@ -11,17 +11,17 @@ var sharedPlugin: SwiftLintXcode?
 
 class SwiftLintXcode: NSObject {
 
-    var bundle: NSBundle
-    lazy var center = NSNotificationCenter.defaultCenter()
+    var bundle: Bundle
+    lazy var center = NotificationCenter.default
 
     var enableMenuItem: NSMenuItem!
     var disableMenuItem: NSMenuItem!
 
-    init(bundle: NSBundle) {
+    init(bundle: Bundle) {
         self.bundle = bundle
 
         super.init()
-        center.addObserver(self, selector: #selector(SwiftLintXcode.onApplicationDidFinishLaunching), name: NSApplicationDidFinishLaunchingNotification, object: nil)
+        center.addObserver(self, selector: #selector(SwiftLintXcode.onApplicationDidFinishLaunching), name: NSNotification.Name.NSApplicationDidFinishLaunching, object: nil)
     }
 
     deinit {
@@ -40,7 +40,7 @@ class SwiftLintXcode: NSObject {
     private func createMenuItems() {
         removeObserver()
 
-        guard let item = NSApp.mainMenu!.itemWithTitle("Edit") else { return }
+        guard let item = NSApp.mainMenu!.item(withTitle: "Edit") else { return }
 
         let pluginMenu = NSMenu(title:"SwiftLintXcode")
         let pluginMenuItem = NSMenuItem(title:"SwiftLintXcode", action: nil, keyEquivalent: "")
@@ -60,7 +60,7 @@ class SwiftLintXcode: NSObject {
         pluginMenu.addItem(disableMenuItem)
         self.disableMenuItem = disableMenuItem
 
-        item.submenu!.addItem(NSMenuItem.separatorItem())
+        item.submenu!.addItem(NSMenuItem.separator())
         item.submenu!.addItem(pluginMenuItem)
 
         updateMenuVisibility()
@@ -83,7 +83,7 @@ class SwiftLintXcode: NSObject {
     }
 
     func updateMenuVisibility() {
-        self.enableMenuItem.hidden = SaveHook.enabled
-        self.disableMenuItem.hidden = !SaveHook.enabled
+        self.enableMenuItem.isHidden = SaveHook.enabled
+        self.disableMenuItem.isHidden = !SaveHook.enabled
     }
 }
