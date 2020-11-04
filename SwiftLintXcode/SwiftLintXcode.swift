@@ -32,7 +32,7 @@ class SwiftLintXcode: NSObject {
         center.removeObserver(self)
     }
 
-    func onApplicationDidFinishLaunching() {
+    @objc func onApplicationDidFinishLaunching() {
         SaveHook.swizzle()
         createMenuItems()
     }
@@ -66,18 +66,18 @@ class SwiftLintXcode: NSObject {
         updateMenuVisibility()
     }
 
-    func doAutoCorrect() {
+    @objc func doAutoCorrect() {
         let sourceCodeDocument: IDESourceCodeDocument = SwiftLintXcodeTRVSXcode.sourceCodeDocument()
         guard Formatter.isFormattableDocument(sourceCodeDocument) else { return }
         Formatter.sharedInstance.tryFormatDocument(sourceCodeDocument)
     }
 
-    func doEnableFormatOnSave() {
+    @objc func doEnableFormatOnSave() {
         SaveHook.enabled = true
         updateMenuVisibility()
     }
 
-    func doDisableFormatOnSave() {
+    @objc func doDisableFormatOnSave() {
         SaveHook.enabled = false
         updateMenuVisibility()
     }

@@ -41,7 +41,7 @@ final class SaveHook {
 // https://github.com/travisjeffery/ClangFormat-Xcode/blob/a22114907592fb5d5b1043a4919d7be3e1496741/ClangFormat/NSDocument+TRVSClangFormat.m
 extension NSDocument {
 
-    dynamic func swiftLintXcodeSaveDocument(delegate: AnyObject?, didSaveSelector: Selector, contextInfo: UnsafeMutableRawPointer) -> Void {
+    @objc dynamic func swiftLintXcodeSaveDocument(delegate: AnyObject?, didSaveSelector: Selector, contextInfo: UnsafeMutableRawPointer) -> Void {
         if SaveHook.tryOnSaveDocument(self) {
             // NOTE: Call original method
             swiftLintXcodeSaveDocument(delegate: delegate, didSaveSelector: didSaveSelector, contextInfo: contextInfo)
