@@ -24,8 +24,11 @@ final class SaveHook {
         if swizzled { return }
         swizzled = true
 
-        let fromMethod = class_getInstanceMethod(NSDocument.self, #selector(NSDocument.save(withDelegate:didSave:contextInfo:)))
-        let toMethod = class_getInstanceMethod(NSDocument.self, #selector(NSDocument.swiftLintXcodeSaveDocument(delegate:didSaveSelector:contextInfo:)))
+        guard let fromMethod = class_getInstanceMethod(NSDocument.self, #selector(NSDocument.save(withDelegate:didSave:contextInfo:))),
+              let toMethod = class_getInstanceMethod(NSDocument.self, #selector(NSDocument.swiftLintXcodeSaveDocument(delegate:didSaveSelector:contextInfo:))) else {
+            return
+        }
+
         method_exchangeImplementations(fromMethod, toMethod)
     }
 
