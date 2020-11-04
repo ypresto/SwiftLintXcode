@@ -21,7 +21,7 @@ class SwiftLintXcode: NSObject {
         self.bundle = bundle
 
         super.init()
-        center.addObserver(self, selector: #selector(SwiftLintXcode.onApplicationDidFinishLaunching), name: NSNotification.Name.NSApplicationDidFinishLaunching, object: nil)
+        center.addObserver(self, selector: #selector(SwiftLintXcode.onApplicationDidFinishLaunching), name: NSApplication.didFinishLaunchingNotification, object: nil)
     }
 
     deinit {
